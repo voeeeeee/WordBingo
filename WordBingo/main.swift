@@ -48,7 +48,6 @@ func changeArray(){
             }
         }
     }
-    print(array)
 }
 
 
@@ -93,8 +92,6 @@ func bingoRowJudge(){
                 continue repeatLine
             }
         }
-        //列のカウント数初期化
-        countRow = 0
     }
     if countTotalRow >= 1{
         judgeRow = true
@@ -112,22 +109,16 @@ func bingoLineJudge(){
                 continue
             }
             countLine += 1
-            
             if countLine == bingoNumber{
                 countTotalLine += 1
-                print(array[i][j])
                 //print("行ビンゴです。")
                 continue repeatRow
             }else{
                 //print("行ビンゴではありません。")
                 continue repeatLine
             }
-            
         }
-        //行のカウント数初期化
-        countLine = 0
     }
-    
     if countTotalLine >= 1{
         judgeLine = true
         //print("横ビンゴが1つ以上あります。")
